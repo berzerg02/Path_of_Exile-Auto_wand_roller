@@ -9,12 +9,13 @@ root.geometry("500x500")
 
 def find_perint():
     image_found = False
-    image_list = ['per1.png', 'per16.png', 'per10.png']
+    image_list = ['per1.png', 'per16.png', 'per10.png', 'explody.png']
 
     while not image_found:
-        if pyautogui.locateCenterOnScreen(image="bluechecker.png", confidence=0.9, minSearchTime=0.5) is not None:
+        if pyautogui.locateCenterOnScreen(image="bluechecker.png", confidence=0.8, minSearchTime=0.5) is not None:
+            print("Found it")
             pyautogui.keyDown('shift')
-            res = pyautogui.locateCenterOnScreen(image=image_list[get_selected_index()], confidence=0.8, minSearchTime=0.5)
+            res = pyautogui.locateCenterOnScreen(image=image_list[get_selected_index()], confidence=0.9, minSearchTime=0.3)
             if res is None:
                 mouse.click('left')
             else:
@@ -34,7 +35,7 @@ def get_selected_index():
     else:
         return None
 
-list_of_mods = ['Either per 16 and per 10 for wand', 'Per 16 for wand', 'Per 10 for wand']
+list_of_mods = ['Either per 16 and per 10 for wand', 'Per 16 for wand', 'Per 10 for wand', 'Explody chest']
 listbox = tk.Listbox(root)
 for item in list_of_mods:
     listbox.insert(tk.END, item)
