@@ -1,4 +1,4 @@
-This is a Path of Exile (POE) alteration reroll script. 
+This is a Path of Exile (POE) alteration reroll script.
 1.You clone the repo
 2.Start the program
 3.Pick what you want to reroll
